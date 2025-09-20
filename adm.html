@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Montage & Démontage d'un PC</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #f4f4f4;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-blend-mode: multiply;
+        }
+        .container {
+            background: rgba(34, 40, 49, 0.85);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .tab {
+            background: none;
+            border: none;
+            color: #00adb5;
+            font-size: 1.1em;
+            padding: 12px 24px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border-radius: 8px 8px 0 0;
+        }
+        .tab.active, .tab:hover {
+            background: #222831;
+            color: #fff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #00adb5;
+        }
+        h2 {
+            color: #00adb5;
+            margin-top: 32px;
+        }
+        ul {
+            margin-left: 24px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #aaa;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('presentation')">Présentation</button>
+            <button class="tab" onclick="showTab('tarifs')">Tarifs</button>
+            <button class="tab" onclick="showTab('horaires')">Horaires</button>
+            <button class="tab" onclick="showTab('apropos')">À propos</button>
+        </div>
+        <div id="presentation" class="tab-content active">
+            <h1>Montage & Démontage d'un PC</h1>
+            <p>
+                Découvrez les étapes essentielles pour assembler ou démonter un ordinateur, avec des conseils pour chaque composant.
+            </p>
+            <h2>Étapes du Montage</h2>
+            <ul>
+                <li>Préparer l’espace de travail et les outils nécessaires (tournevis, bracelet antistatique...)</li>
+                <li>Installer la carte mère dans le boîtier</li>
+                <li>Monter le processeur et le ventilateur</li>
+                <li>Insérer la mémoire RAM</li>
+                <li>Installer l’alimentation</li>
+                <li>Brancher les câbles (alimentation, SATA, etc.)</li>
+                <li>Ajouter les disques durs/SSD</li>
+                <li>Installer la carte graphique et autres cartes d’extension</li>
+                <li>Vérifier les connexions et effectuer un premier démarrage</li>
+            </ul>
+            <h2>Étapes du Démontage</h2>
+            <ul>
+                <li>Éteindre et débrancher le PC</li>
+                <li>Retirer les panneaux du boîtier</li>
+                <li>Déconnecter tous les câbles</li>
+                <li>Retirer les composants un à un (carte graphique, RAM, disques...)</li>
+                <li>Dévisser la carte mère et l’alimentation</li>
+                <li>Nettoyer les composants si nécessaire</li>
+            </ul>
+        </div>
+        <div id="tarifs" class="tab-content">
+            <h1>Tarifs</h1>
+            <ul>
+                <li>Montage / Démontage PC complet : <strong>120€</strong></li>
+                <li>Remplacement de composants : <strong>20€ à 30€</strong></li>
+                <li>Diagnostic et conseils : <strong>10€</strong></li>
+            </ul>
+        </div>
+        <div id="horaires" class="tab-content">
+            <h1>Horaires</h1>
+            <table style="width:100%;border-collapse:collapse;background:#222831;color:#fff;">
+                <thead>
+                    <tr style="background:#00adb5;">
+                        <th style="padding:8px;border:1px solid #393e46;">Jour</th>
+                        <th style="padding:8px;border:1px solid #393e46;">Disponibilité</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:8px;border:1px solid #393e46;">Lundi - Vendredi</td>
+                        <td style="padding:8px;border:1px solid #393e46;">18h30 - 20h30</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;border:1px solid #393e46;">Samedi</td>
+                        <td style="padding:8px;border:1px solid #393e46;">12h00 - 20h30</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:8px;border:1px solid #393e46;">Dimanche</td>
+                        <td style="padding:8px;border:1px solid #393e46;">12h00 - 20h30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="apropos" class="tab-content">
+            <h1>À propos</h1>
+            <p>
+                Technicien informatique & administrateur réseau en CDI, je propose des services de montage et démontage PC à domicile dans les Yvelines.
+            </p>
+            <ul>
+                <li>Montage PC gaming, bureautique et workstation</li>
+                <li>Upgrade et optimisation de configurations existantes</li>
+                <li>Démontage et récupération de composants</li>
+                <li>Diagnostic et conseil technique personnalisé</li>
+            </ul>
+            <p>
+                Intervention professionnelle le soir et week-end.<br>
+                Matériel testé, conseils inclus, garantie intervention.<br>
+                Particuliers et professionnels.
+            </p>
+            <div style="text-align:center;margin-top:24px;">
+                <div class="sketchfab-embed-wrapper">
+                    <iframe title="Custom Gaming PC" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/1a24273417534f69afa0f7c62b643ffc/embed?autostart=1" width="400" height="300"></iframe>
+                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                        <a href="https://sketchfab.com/3d-models/custom-gaming-pc-1a24273417534f69afa0f7c62b643ffc?utm_medium=embed&utm_campaign=share-popup&utm_content=1a24273417534f69afa0f7c62b643ffc" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                            Custom Gaming PC
+                        </a> by
+                        <a href="https://sketchfab.com/Yolala3d?utm_medium=embed&utm_campaign=share-popup&utm_content=1a24273417534f69afa0f7c62b643ffc" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                            Yolala3D | Y3D
+                        </a> on
+                        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=1a24273417534f69afa0f7c62b643ffc" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">
+                            Sketchfab
+                        </a>
+                    </p>
+                </div>
+                <p style="font-size:0.9em;color:#aaa;">Animation 3D : PC Gamer (source : Sketchfab)</p>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2025 - Guide Informatique | Image de fond : Unsplash
+        </div>
+    </div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(function(content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+            document.querySelectorAll('.tab').forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            const tabs = document.querySelectorAll('.tab');
+            if(tabId === 'presentation') tabs[0].classList.add('active');
+            if(tabId === 'tarifs') tabs[1].classList.add('active');
+            if(tabId === 'horaires') tabs[2].classList.add('active');
+            if(tabId === 'apropos') tabs[3].classList.add('active');
+        }
+    </script>
+</body>
+</html>
